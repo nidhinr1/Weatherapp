@@ -204,15 +204,18 @@ body{
             weather(searchbox.value);
         })
         searchbox.addEventListener('keydown', (event) => {
-    // Check if Enter key is pressed (keyCode 13)
-    if (event.keyCode === 13) {
-        // Prevent default form submission behavior
+        if (event.keyCode === 13) {
         event.preventDefault();
+        if(searchbox.value == ""){
+            window.alert("Input cannot be empty!")
+            console.error("Input Empty!")
+        }
+        else{
+            weather(searchbox.value);
+        }
         
-        // Call the weather function with the value of the input field
-        weather(searchbox.value);
     }
-});
+    });
     </script>
 </body>
 </html>
