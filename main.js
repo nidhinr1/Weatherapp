@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
     // Send the HTML file as the response
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+app.get('/forecast', (req, res) => {
+    // Send the HTML file as the response
+    res.sendFile(path.join(__dirname, 'forecast.html'));
+});
 
 // Start the server
 app.listen(port, () => {
